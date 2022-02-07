@@ -336,7 +336,9 @@ namespace Converter{
 
             void MorseCode(){
 
+                Console.WriteLine("To be added...");
 
+                Console.ReadKey();
 
             }
 
