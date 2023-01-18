@@ -30,9 +30,9 @@ namespace Converter {
                 ColorText.WriteColor("0", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Exit\n", ConsoleColor.Cyan);
 
-                int decision1 = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
 
-                switch (decision1) {
+                switch (decision) {
 
                     case 0:
                         Environment.Exit(0);
@@ -69,9 +69,9 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Hash to Text\n", ConsoleColor.Cyan);
 
-                int decision2 = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
 
-                switch (decision2) {
+                switch (decision) {
 
                     case 1:
 
@@ -140,9 +140,9 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Binary to Text\n", ConsoleColor.Cyan);
 
-                int decision2 = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
 
-                switch (decision2) {
+                switch (decision) {
 
                     case 1:
 
@@ -211,9 +211,9 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Hexadecimal to Text\n", ConsoleColor.Cyan);
 
-                int decision2 = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
 
-                switch (decision2) {
+                switch (decision) {
 
                     case 1:
 
@@ -271,7 +271,72 @@ namespace Converter {
 
             void MorseCode() {
 
-                ColorText.WriteLineColor("To be added...",  ConsoleColor.White);
+                Console.Clear();
+
+                ColorText.WriteLineColor("----------", ConsoleColor.Yellow);
+                ColorText.WriteLineColor("Morse Code", ConsoleColor.Yellow);
+                ColorText.WriteLineColor("----------", ConsoleColor.Yellow);
+
+                ColorText.WriteColor("\n1", ConsoleColor.Magenta);
+                ColorText.WriteLineColor(" - Text to Morse", ConsoleColor.Cyan);
+                ColorText.WriteColor("2", ConsoleColor.Magenta);
+                ColorText.WriteLineColor(" - Morse to Text\n", ConsoleColor.Cyan);
+
+                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+
+                switch (decision) {
+
+                    case 1:
+
+                        Console.Clear();
+
+                        ColorText.WriteLineColor("------------------", ConsoleColor.Yellow);
+                        ColorText.WriteLineColor("Text to Morse Code", ConsoleColor.Yellow);
+                        ColorText.WriteLineColor("------------------", ConsoleColor.Yellow);
+
+                        ColorText.WriteColor("\nText: ", ConsoleColor.Cyan);
+
+                        string input1 = ColorText.ReadLineColor(ConsoleColor.Yellow);
+
+                        // var output1 = 
+
+                        ColorText.WriteColor($"\nHex: ", ConsoleColor.Cyan);
+                        // ColorText.WriteLineColor(output1, ConsoleColor.Yellow);
+
+                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+
+                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
+
+                        break;
+
+                    case 2:
+
+                        Console.Clear();
+
+                        ColorText.WriteLineColor("------------------", ConsoleColor.Yellow);
+                        ColorText.WriteLineColor("Morse Code to Text", ConsoleColor.Yellow);
+                        ColorText.WriteLineColor("------------------", ConsoleColor.Yellow);
+
+                        ColorText.WriteColor("\nHex: ", ConsoleColor.Cyan);
+
+                        string input2 = ColorText.ReadLineColor(ConsoleColor.Yellow);
+
+                        // var output2 = 
+
+                        ColorText.WriteColor($"\nText: ", ConsoleColor.Cyan);
+                        // ColorText.WriteLineColor(output2, ConsoleColor.Yellow);
+
+                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+
+                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
+
+                        break;
+
+                    default:
+
+                        return;
+
+                }
 
                 ColorText.ReadKeyColor(ConsoleColor.Yellow);
 
