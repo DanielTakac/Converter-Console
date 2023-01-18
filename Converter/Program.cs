@@ -3,16 +3,16 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Converter{
+namespace Converter {
+    
+    public class Program {
 
-    public class Program{
-
-        public static void Main(string[] args){
+        public static void Main(string[] args) {
 
             bool running = true;
 
-            while (running){
-
+            while (running) {
+                
                 Console.Clear();
 
                 ColorText.WriteLineColor("---------", ConsoleColor.Yellow);
@@ -32,7 +32,7 @@ namespace Converter{
 
                 int decision1 = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
 
-                switch (decision1){
+                switch (decision1) {
 
                     case 0:
                         Environment.Exit(0);
@@ -56,7 +56,7 @@ namespace Converter{
 
             }
 
-            void Hash(){
+            void Hash() {
 
                 Console.Clear();
 
@@ -71,7 +71,7 @@ namespace Converter{
 
                 int decision2 = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
 
-                switch (decision2){
+                switch (decision2) {
 
                     case 1:
 
@@ -95,6 +95,7 @@ namespace Converter{
                         ColorText.ReadKeyColor(ConsoleColor.Yellow);
 
                         break;
+                        
                     case 2:
 
                         Console.Clear();
@@ -117,14 +118,16 @@ namespace Converter{
                         ColorText.ReadKeyColor(ConsoleColor.Yellow);
 
                         break;
+
                     default:
+                        
                         return;
 
                 }
 
             }
 
-            void Binary(){
+            void Binary() {
 
                 Console.Clear();
 
@@ -139,7 +142,7 @@ namespace Converter{
 
                 int decision2 = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
 
-                switch (decision2){
+                switch (decision2) {
 
                     case 1:
 
@@ -163,6 +166,7 @@ namespace Converter{
                         ColorText.ReadKeyColor(ConsoleColor.Yellow);
 
                         break;
+                        
                     case 2:
 
                         Console.Clear();
@@ -185,14 +189,16 @@ namespace Converter{
                         ColorText.ReadKeyColor(ConsoleColor.Yellow);
 
                         break;
+                        
                     default:
+                        
                         return;
 
                 }
 
             }
 
-            void Hexadecimal(){
+            void Hexadecimal() {
 
                 Console.Clear();
 
@@ -207,7 +213,7 @@ namespace Converter{
 
                 int decision2 = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
 
-                switch (decision2){
+                switch (decision2) {
 
                     case 1:
 
@@ -231,6 +237,7 @@ namespace Converter{
                         ColorText.ReadKeyColor(ConsoleColor.Yellow);
 
                         break;
+                        
                     case 2:
 
                         Console.Clear();
@@ -253,14 +260,16 @@ namespace Converter{
                         ColorText.ReadKeyColor(ConsoleColor.Yellow);
 
                         break;
+                        
                     default:
+                        
                         return;
 
                 }
 
             }
 
-            void MorseCode(){
+            void MorseCode() {
 
                 ColorText.WriteLineColor("To be added...",  ConsoleColor.White);
 
