@@ -2,9 +2,66 @@
 using System;
 using System.Text;
 
-namespace Converter{
+namespace Converter {
 
-	public class Functions{
+    public class Functions {
+
+        static Dictionary<char, string> morseCodes = new Dictionary<char, string>() {
+            { 'A', ".-" },
+            { 'B', "-..." },
+            { 'C', "-.-." },
+            { 'D', "-.." },
+            { 'E', "." },
+            { 'F', "..-." },
+            { 'G', "--." },
+            { 'H', "...." },
+            { 'I', ".." },
+            { 'J', ".---" },
+            { 'K', "-.-" },
+            { 'L', ".-.." },
+            { 'M', "--" },
+            { 'N', "-." },
+            { 'O', "---" },
+            { 'P', ".--." },
+            { 'Q', "--.-" },
+            { 'R', ".-." },
+            { 'S', "..." },
+            { 'T', "-" },
+            { 'U', "..-" },
+            { 'V', "...-" },
+            { 'W', ".--" },
+            { 'X', "-..-" },
+            { 'Y', "-.--" },
+            { 'Z', "--.." },
+            { '0', "-----" },
+            { '1', ".----" },
+            { '2', "..---" },
+            { '3', "...--" },
+            { '4', "....-" },
+            { '5', "....." },
+            { '6', "-...." },
+            { '7', "--..." },
+            { '8', "---.." },
+            { '9', "----." },
+            { '.', ".-.-.-" },
+            { ',', "--..--" },
+            { '?', "..--.." },
+            { '\'', ".----." },
+            { '!', "-.-.--" },
+            { '/', "-..-." },
+            { '(', "-.--." },
+            { ')', "-.--.-" },
+            { '&', ".-..." },
+            { ':', "---..." },
+            { ';', "-.-.-." },
+            { '=', "-...-" },
+            { '+', ".-.-." },
+            { '-', "-....-" },
+            { '_', "..--.-" },
+            { '"', ".-..-." },
+            { '$', "...-..-" },
+            { '@', ".--.-." }
+        };
 
         public static string HashString(string plainText){
 
@@ -74,29 +131,27 @@ namespace Converter{
 
         public static string StringToMorse(string data){
 
-            char[] letters = { ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-            string[] morseLetters = { "    ", ". ___", "___ . . .", "___ . ___ .", "___ . .", ".", ". . ___ .", "___ ___ .", ". . . .", ". .", ". ___ ___ ___", "___ . ___", ". ___ . .", "___ ___", "___ .", "___ ___ ___", ". ___ ___ .", "___ ___ . ___", ". ___ .", ". . .", "_", ". . ___", ". . . ___", ". ___ ___", "___ . . ___", "___ . ___ ___", "___ ___ . .", ". ___ ___ ___ ___", ". . ___ ___ ___", ". . . ___ ___", ". . . . ___", ". . . . .", "___ . . . .", "___ ___ . . .", "___ ___ ___ . .", "___ ___ ___ ___ .", "___ ___ ___ ___ ___" };
-            string textToChange = "";
-            string newText = "";
-            textToChange = data;
-            textToChange = textToChange.ToLower();
-            for (int i = 0; i < textToChange.Length; i++){
+            string text = data;
+            
+            string newText = string.Empty;
 
-                for (short j = 0; j < 37; j++){
+            foreach (char character in text) {
 
-                    if (textToChange[i] == letters[j]){
+                if (morseCodes.ContainsKey(character)) {
 
-                        newText += morseLetters[j];
-                        newText += "   ";
-                        break;
-                    
-                    }
-                
+                    newText += morseCodes[character] + " ";
+
+                } else {
+
+                    Console.Write($"'{character}' can't be converted to morse code.");
+
+                    return null;
+
                 }
 
             }
 
-            return newText;
+            return text;
 
         }
 

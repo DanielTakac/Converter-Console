@@ -298,10 +298,14 @@ namespace Converter {
 
                         string input1 = ColorText.ReadLineColor(ConsoleColor.Yellow);
 
-                        // var output1 = 
+                        var output1 = Functions.StringToMorse(input1);
 
-                        ColorText.WriteColor($"\nHex: ", ConsoleColor.Cyan);
-                        // ColorText.WriteLineColor(output1, ConsoleColor.Yellow);
+                        if (output1 != null) {
+
+                            ColorText.WriteColor($"\nMorse: ", ConsoleColor.Cyan);
+                            ColorText.WriteLineColor(output1, ConsoleColor.Yellow);
+
+                        }
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
@@ -317,7 +321,7 @@ namespace Converter {
                         ColorText.WriteLineColor("Morse Code to Text", ConsoleColor.Yellow);
                         ColorText.WriteLineColor("------------------", ConsoleColor.Yellow);
 
-                        ColorText.WriteColor("\nHex: ", ConsoleColor.Cyan);
+                        ColorText.WriteColor("\nMorse: ", ConsoleColor.Cyan);
 
                         string input2 = ColorText.ReadLineColor(ConsoleColor.Yellow);
 
