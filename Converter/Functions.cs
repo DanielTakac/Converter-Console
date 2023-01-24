@@ -139,7 +139,11 @@ namespace Converter {
 
                 char uppercaseChar = char.ToUpper(character);
 
-                if (morseCodes.ContainsKey(uppercaseChar)) {
+                if (uppercaseChar == ' ') {
+
+                    newText += " / ";
+
+                } else if (morseCodes.ContainsKey(uppercaseChar)) {
 
                     newText += morseCodes[uppercaseChar] + " ";
 
@@ -153,7 +157,7 @@ namespace Converter {
 
             }
 
-            return text;
+            return newText;
 
         }
 
