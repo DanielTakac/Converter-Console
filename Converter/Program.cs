@@ -29,7 +29,7 @@ namespace Converter {
                 ColorText.WriteColor("0", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Exit\n", ConsoleColor.Cyan);
 
-                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
 
                 switch (decision) {
 
@@ -68,7 +68,7 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Hash to Text\n", ConsoleColor.Cyan);
 
-                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
 
                 switch (decision) {
 
@@ -139,7 +139,7 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Binary to Text\n", ConsoleColor.Cyan);
 
-                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
 
                 switch (decision) {
 
@@ -210,7 +210,7 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Hexadecimal to Text\n", ConsoleColor.Cyan);
 
-                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
 
                 switch (decision) {
 
@@ -281,7 +281,7 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Morse to Text\n", ConsoleColor.Cyan);
 
-                int decision = Convert.ToInt32(ColorText.ReadLineColor(ConsoleColor.Yellow));
+                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
 
                 switch (decision) {
 
