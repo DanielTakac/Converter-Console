@@ -125,7 +125,7 @@ namespace Converter {
                         ColorText.WriteColor($"\nHash: ", ConsoleColor.Cyan);
                         ColorText.WriteLineColor(output1, ConsoleColor.Yellow);
 
-                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+                        ColorText.WriteLineColor("\nPress any key to go back to the main menu", ConsoleColor.Cyan);
 
                         break;
                         
@@ -146,7 +146,7 @@ namespace Converter {
                         ColorText.WriteColor($"\nText:", ConsoleColor.Cyan);
                         ColorText.WriteLineColor(output2, ConsoleColor.Yellow);
 
-                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+                        ColorText.WriteLineColor("\nPress any key to go back to the main menu", ConsoleColor.Cyan);
 
                         break;
 
@@ -194,7 +194,7 @@ namespace Converter {
                         ColorText.WriteColor($"\nBinary: ", ConsoleColor.Cyan);
                         ColorText.WriteLineColor(output1, ConsoleColor.Yellow);
 
-                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+                        ColorText.WriteLineColor("\nPress any key to go back to the main menu", ConsoleColor.Cyan);
 
                         break;
                         
@@ -215,7 +215,7 @@ namespace Converter {
                         ColorText.WriteColor($"\nText: ", ConsoleColor.Cyan);
                         ColorText.WriteLineColor(output2, ConsoleColor.Yellow);
 
-                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+                        ColorText.WriteLineColor("\nPress any key to go back to the main menu", ConsoleColor.Cyan);
 
                         break;
                         
@@ -263,7 +263,7 @@ namespace Converter {
                         ColorText.WriteColor($"\nHex: ", ConsoleColor.Cyan);
                         ColorText.WriteLineColor(output1, ConsoleColor.Yellow);
 
-                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+                        ColorText.WriteLineColor("\nPress any key to go back to the main menu", ConsoleColor.Cyan);
 
                         break;
                         
@@ -284,7 +284,7 @@ namespace Converter {
                         ColorText.WriteColor($"\nText: ", ConsoleColor.Cyan);
                         ColorText.WriteLineColor(output2, ConsoleColor.Yellow);
 
-                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+                        ColorText.WriteLineColor("\nPress any key to go back to the main menu", ConsoleColor.Cyan);
 
                         break;
                         
@@ -333,10 +333,10 @@ namespace Converter {
 
                             ColorText.WriteColor($"\nMorse: ", ConsoleColor.Cyan);
                             ColorText.WriteLineColor(output1, ConsoleColor.Yellow);
-
+                            
                         }
 
-                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+                        ColorText.WriteLineColor("\nPress any key to go back to the main menu", ConsoleColor.Cyan);
 
                         break;
 
@@ -361,7 +361,7 @@ namespace Converter {
 
                         }
 
-                        ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
+                        ColorText.WriteLineColor("\nPress any key to go back to the main menu", ConsoleColor.Cyan);
 
                         break;
 
