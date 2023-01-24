@@ -174,6 +174,16 @@ namespace Converter {
 
                 foreach (var letter in letters) {
 
+                    bool isValid = letter.All(c => c == '.' || c == '-' || c == ' ');
+
+                    if (!isValid) {
+
+                        ColorText.WriteLineColor($"\n'{letter}' is not a valid morse code character", ConsoleColor.Red);
+
+                        return null;
+
+                    }
+
                     var key = morseCodes.FirstOrDefault(x => x.Value == letter).Key;
 
                     newText += key;

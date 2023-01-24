@@ -127,8 +127,6 @@ namespace Converter {
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
-                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
-
                         break;
                         
                     case 2:
@@ -150,8 +148,6 @@ namespace Converter {
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
-                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
-
                         break;
 
                     default:
@@ -159,6 +155,8 @@ namespace Converter {
                         return;
 
                 }
+
+                Console.ReadKey();
 
             }
 
@@ -198,8 +196,6 @@ namespace Converter {
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
-                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
-
                         break;
                         
                     case 2:
@@ -221,8 +217,6 @@ namespace Converter {
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
-                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
-
                         break;
                         
                     default:
@@ -230,6 +224,8 @@ namespace Converter {
                         return;
 
                 }
+
+                Console.ReadKey();
 
             }
 
@@ -269,8 +265,6 @@ namespace Converter {
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
-                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
-
                         break;
                         
                     case 2:
@@ -292,8 +286,6 @@ namespace Converter {
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
-                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
-
                         break;
                         
                     default:
@@ -301,6 +293,8 @@ namespace Converter {
                         return;
 
                 }
+
+                Console.ReadKey();
 
             }
 
@@ -344,8 +338,6 @@ namespace Converter {
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
-                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
-
                         break;
 
                     case 2:
@@ -371,8 +363,6 @@ namespace Converter {
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
-                        ColorText.ReadKeyColor(ConsoleColor.Yellow);
-
                         break;
 
                     default:
@@ -381,7 +371,7 @@ namespace Converter {
 
                 }
 
-                ColorText.ReadKeyColor(ConsoleColor.Yellow);
+                Console.ReadKey();
 
             }
 
