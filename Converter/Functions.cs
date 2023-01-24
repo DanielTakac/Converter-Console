@@ -145,7 +145,7 @@ namespace Converter {
 
                 } else {
 
-                    ColorText.WriteLineColor($"'{uppercaseChar}' can't be converted to morse code.", ConsoleColor.Red);
+                    ColorText.WriteLineColor($"\n'{uppercaseChar}' can't be converted to morse code", ConsoleColor.Red);
 
                     return null;
 
