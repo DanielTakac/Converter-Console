@@ -6,6 +6,42 @@ namespace Converter {
     
     public class Program {
 
+        public static int GetUserInput(int minValue, int maxValue) {
+
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+            while (true) {
+
+                if (char.IsDigit(keyInfo.KeyChar)) {
+
+                    int input = int.Parse(keyInfo.KeyChar.ToString());
+
+                    if (input < minValue || input > maxValue) {
+
+                        Console.Write("\r"); // Removes the user input from the console
+
+                        ColorText.WriteLineColor($"Please enter a number between {minValue} and {maxValue}", ConsoleColor.Red);
+
+                        keyInfo = Console.ReadKey();
+
+                        continue;
+
+                    }
+
+                    return input;
+                    
+                }
+
+                Console.Write("\r"); // Removes the user input from the console
+
+                ColorText.WriteLineColor("Please enter a valid number", ConsoleColor.Red);
+
+                keyInfo = Console.ReadKey();
+
+            }
+
+        }
+
         public static void Main(string[] args) {
 
             bool running = true;
@@ -29,9 +65,9 @@ namespace Converter {
                 ColorText.WriteColor("0", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Exit\n", ConsoleColor.Cyan);
 
-                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
+                int input = GetUserInput(0, 4);
 
-                switch (decision) {
+                switch (input) {
 
                     case 0:
                         Environment.Exit(0);
@@ -68,9 +104,9 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Hash to Text\n", ConsoleColor.Cyan);
 
-                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
+                int input = GetUserInput(1, 2);
 
-                switch (decision) {
+                switch (input) {
 
                     case 1:
 
@@ -139,9 +175,9 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Binary to Text\n", ConsoleColor.Cyan);
 
-                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
+                int input = GetUserInput(1, 2);
 
-                switch (decision) {
+                switch (input) {
 
                     case 1:
 
@@ -210,9 +246,9 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Hexadecimal to Text\n", ConsoleColor.Cyan);
 
-                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
-
-                switch (decision) {
+                int input = GetUserInput(1, 2);
+                
+                switch (input) {
 
                     case 1:
 
@@ -281,9 +317,9 @@ namespace Converter {
                 ColorText.WriteColor("2", ConsoleColor.Magenta);
                 ColorText.WriteLineColor(" - Morse to Text\n", ConsoleColor.Cyan);
 
-                int decision = int.Parse(Console.ReadKey().KeyChar.ToString());
+                int input = GetUserInput(1, 2);
 
-                switch (decision) {
+                switch (input) {
 
                     case 1:
 
