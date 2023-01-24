@@ -360,10 +360,14 @@ namespace Converter {
 
                         string input2 = ColorText.ReadLineColor(ConsoleColor.Yellow);
 
-                        // var output2 = 
+                        var output2 = Functions.MorseToString(input2);
 
-                        ColorText.WriteColor($"\nText: ", ConsoleColor.Cyan);
-                        // ColorText.WriteLineColor(output2, ConsoleColor.Yellow);
+                        if (output2 != null) {
+
+                            ColorText.WriteColor($"\nText: ", ConsoleColor.Cyan);
+                            ColorText.WriteLineColor(output2, ConsoleColor.Yellow);
+
+                        }
 
                         ColorText.WriteLineColor("\nPress any button to go back to main menu", ConsoleColor.Cyan);
 
