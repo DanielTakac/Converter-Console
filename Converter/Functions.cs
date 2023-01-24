@@ -137,13 +137,15 @@ namespace Converter {
 
             foreach (char character in text) {
 
-                if (morseCodes.ContainsKey(character)) {
+                char uppercaseChar = char.ToUpper(character);
 
-                    newText += morseCodes[character] + " ";
+                if (morseCodes.ContainsKey(uppercaseChar)) {
+
+                    newText += morseCodes[uppercaseChar] + " ";
 
                 } else {
 
-                    Console.Write($"'{character}' can't be converted to morse code.");
+                    ColorText.WriteLineColor($"'{uppercaseChar}' can't be converted to morse code.", ConsoleColor.Red);
 
                     return null;
 
